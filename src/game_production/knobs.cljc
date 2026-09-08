@@ -13,7 +13,7 @@
   period is reported alongside the millisecond figure it came from so a
   mismatch is visible in the output instead of showing up as a game that runs
   at the wrong speed."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [game-production.spec :as spec]))
 
 (defn- v [m & ks] (some #(get m %) ks))
@@ -81,7 +81,7 @@
                      :note "enemies enter at the edge of vision, so the fog radius is the spawn ring"}})))
 
 (defn- ns-safe [s]
-  (-> (str (or s "game")) str/lower-case (str/replace #"[^a-z0-9]+" "_")
+  (-> (str (or s "game")) str/lower (str/replace #"[^a-z0-9]+" "_")
       (str/replace #"(^_|_$)" "")))
 
 (defn substitutions

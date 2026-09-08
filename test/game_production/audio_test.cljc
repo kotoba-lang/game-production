@@ -1,5 +1,5 @@
 (ns game-production.audio-test
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [game-production.audio :as audio]
             [game-production.spec-test :refer [sample]]))
