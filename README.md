@@ -107,8 +107,8 @@ hold.
 ## Tests
 
 ```bash
-clojure -M:test     # 32 tests, 100 assertions
-clojure -M:lint
+kbb -M:test     # 32 tests, 100 assertions
+kbb -M:lint
 ```
 
 Apache-2.0.
